@@ -107,7 +107,7 @@
 .grid h3 {
     font-size: 3rem;
     position: relative;
-    padding-left: 5rem;
+    padding-left: 8rem;
     padding-bottom: 3rem;
 }
 
@@ -118,7 +118,7 @@
     font-size: 8rem;
     font-style: italic;
     top: -4rem;
-    left: -2rem;
+    left: 0;
     transform: rotate(5deg);
 }
 
@@ -260,9 +260,30 @@ table th, tfoot td  {
     display: none;
 }
 
+.back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: var(--white-color);
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: var(--primary-color);
+    transform: rotate(-90deg);
+    border: 0.1rem solid var(--primary-color);
+  }
+
 @media (max-width: 800px) {
-    .logo-content, .grid {
+    .logo-content,
+    .grid {
         grid-template-columns: 1fr;
+    }
+
+    .grid {
+        overflow-x: hidden;
     }
 
     .grid-gallery {
@@ -272,6 +293,12 @@ table th, tfoot td  {
     .grid-gallery img {
         width: 100%;
         height: auto;
+    }
+
+    .contact-form {
+        max-width: 77%;
+        overflow-x: auto;
+        padding-bottom: 1rem;
     }
 
     .menu {
